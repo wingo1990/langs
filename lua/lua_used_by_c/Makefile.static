@@ -1,0 +1,5 @@
+all: main.c
+	gcc -o test_static main.c -L. -Wl,-Bstatic -llua -Wl,-Bdynamic -lm -ldl 
+
+clean:
+	rm -f *.o test_static
